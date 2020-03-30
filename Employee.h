@@ -3,9 +3,14 @@
 #define EMPLOYEE_H
 
 #include <iostream>
+
+#include "Payroll.h"
+#include "Efficiency.h"
+#include "Pay.h"
+
 using namespace std;
 
-class Employee {
+class Employee : public Payroll, Efficiency, Pay {
 
 private:
 
