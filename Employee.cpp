@@ -3,27 +3,56 @@
 #include <iostream>
 using namespace std;
 
-Employee::Employee(string n) {
-	setName(n);
+Employee::Employee(string na, string po) {
+	setId();
+	setName(na);
+	setPos(po);
 }
 
-Employee::Employee(string n, string d, string e, int p, string h) {
-	setName(n);
-	setDateOB(d);
-	setEmail(e);
-	setPhone(p);
-	setDateH(h);
+Employee::Employee(string na, string po, string da, string em, int ph, string hi) {
+	setId();
+	setName(na);
+	setPos(po);
+	setDateOB(da);
+	setEmail(em);
+	setPhone(ph);
+	setDateH(hi);
 }
+
+// ID Number Generator
+int Employee::generateId() {
+	srand(time(NULL));
+	int id = rand() % 900000 + 100000; // number between 100000 and 999999
+	return id
+}
+
+/* // Checks ID Uniqueness
+bool Employee::isUniqueId(int id) {
+	// loop through employees' IDs
+	// return true if unique
+} */
 
 // mutators
-void Employee::setName(string n) { name = n; }
-void Employee::setDateOB(string d) { dob = d; }
-void Employee::setEmail(string e) { email = e; }
-void Employee::setPhone(int p) { phone = p; }
-void Employee::setDateH(string h) { doh = h; }
+void Employee::setId() { 
+	id = generateId();
+	cout << "ID Generated: " << id << endl;
+	/*while (!isUniqueId(id)) {
+		id++
+	}
+	cout << "New ID Generated: " << id << endl;*/
+	idNumber = id;
+}
+void Employee::setName(string na) { name = na; }
+void Employee::setPos(string po) { pos = po; }
+void Employee::setDateOB(string da) { dob = da; }
+void Employee::setEmail(string em) { email = em; }
+void Employee::setPhone(int ph) { phone = ph; }
+void Employee::setDateH(string hi) { doh = hi; }
 
 // accessors
+string Employee::getId() const { return idNumber; }
 string Employee::getName() const { return name; }
+string Employee::getPos() const { return pos; }
 string Employee::getDateOB() const { return dob; }
 string Employee::getEmail() const { return email; }
 int Employee::getPhone() const { return phone; }
