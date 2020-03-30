@@ -1,5 +1,7 @@
-//Matthew Fernandes 
-//400237897
+//Payroll.h
+//child
+//Number of Employees (static) 
+//Total Annual Employment Cost(static)
 #ifndef PAYROLL_H
 #define PAYROLL_H
 #include <iostream>
@@ -8,50 +10,18 @@
 using namespace std;
 class Payroll {
 protected:
-	int payroll_id;
-	string  payroll_title;
-	string  payroll_descriptions;
-	string  payroll_type;
-	int payroll_employee_id;
+	static int NumofEmployee;//NoE
+	static double TotalAnnualEmploymentCost;//will refer as TAEC 
 public:
-	Payroll() {
-		payroll_title = " ";
-		payroll_descriptions = " ";
-		payroll_type = " ";	
-	}
-	Payroll(int prid, int  premid) {
-		payroll_id = prid;
-		payroll_employee_id = premid;
-	}
-
-void setPayrollid(int prid) { payroll_id = prid; }
-void setPayrollEmployeeID(int premid) { payroll_employee_id = premid; }
-void setPayrolltitle() { payroll_title = " "; }
-void setPayrollEmployeeDescription() { payroll_descriptions = " "; }
-void setPayrolltype() { payroll_type = " "; }
-int getPayrollid()const { return payroll_id; }
-int getPayrollEmployeeid()const { return payroll_employee_id; }
-string getPayrolltitle()const{return  payroll_title;}
-string getPayrollDescription()const { return  payroll_descriptions; }
-string getPayrolltype()const { return  payroll_type; }
-
+	//default constructor
+	Payroll();
+	//constructor 
+	Payroll(static int, static double);
+	void setNumofEmployee(int);
+	void setTotalAnnualEmploymentCost(double);
+	//accessors
+	int getNumofEmployee() const;
+	double getTotalAnnualEmploymentCost() const;
+	virtual void print() const;
 };
 #endif 
-
-
-/*
-+payroll_id:int
-+payroll_title: string
-+payroll_descriptions:string
-+payroll_type:string
-+payroll_employee_id: int
-+addPayroll()
-+editPayroll()
-+deletePayroll()
-+searchPayRoll()
-*/
-/*addPayroll() { }
-editPayroll() { }
-deletePayroll() { }
-searchPayRoll() { }
-*/
