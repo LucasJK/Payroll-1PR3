@@ -64,7 +64,7 @@ int main()
 	// 3 [Function Show Employee list]
 
 
-
+	// Matthew
 	// Function Read
 
 	// Function W (Welcome)
@@ -73,22 +73,27 @@ int main()
 
 	// Function Show
 
+	// Lucas
 	// Function X (Employee Options)
-
+	
 	// Function Input PI (Personal Info)
 	// Function Input PI Full (For full input of personal info)
 	// Function Update PI
 
+
+	// Parth
 	// Function SW (Salary or Wage)
 	// Function SW Full (For full input of Pay info based on if salary or wage)
 	// Function Update PE (Pay/Efficiency)
 
+	// Harjot
 	// Function Add Employee
 
 	// Function Show Employee list
 
 	// Function Remove
-
+	
+	// Exception hanlder function (for when the user uses a wrong input)
 
 	/*
 	Payroll* FinalPay[3] = {
@@ -123,12 +128,30 @@ int main()
 }
 
 	 
+void employeeOptions() {
 
-	
-	
-	
+	cout << "Please enter one of the following commands:" << endl;
+	cout << "1 - Update Pay/Efficiency Information" << endl;
+	cout << "2 - Update Personal Information" << endl;
+	cout << "0 - Return to Main Menu" << endl;
+
+	cin >> i;
+// call exception handler?
+	if (i == 1) {
+		cout << "Update Pay/Efficiency Information..." << endl;
+			// call corresponding SW Function
+	}
+	else if (i == 2) {
+		cout << "Update Personal Information..." << endl;
+			// call corresponding PI Function
+	}
+	else if (i == 0) {
+		cout << "Return to Main Menu..." << endl;
+			// call Welcome Function
+	}
 
 }
+
 /* string newemployee;
 
 	 cout << " Payroll Management System " << endl;
