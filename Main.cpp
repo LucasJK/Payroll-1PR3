@@ -8,6 +8,7 @@
 #include "Efficiency.h"
 #include "Pay.h"
 #include "Employee.h"
+#include <string>
 using namespace std; 
 
 int main()
@@ -82,7 +83,6 @@ int main()
 
 
 	
-	/*
 	Payroll* FinalPay[3] = {
 						  new Payroll(),
 						  new Efficiency(),
@@ -110,7 +110,9 @@ int main()
 	for (int i = 0; i < 3; i++) {
 		Payroll[i]->print();
 		cout << endl;
-	} */
+	} 
+
+
 	return 0;
 }
 
@@ -133,17 +135,17 @@ cout << "Email Address: " << e.getEmail() << endl;
 }
 // Function Remove
 void removeEmployee() {
-	string employee;
+	string emp, line;
 	ifstream file;
 	ofstream temp;
 	file.open("Database.txt");
 	temp.open("Temp.txt");
 	cout << "Which Employee would you like to delete ?" << endl;
-	cin >> employee;
-
-	while (getline(file, temp)) {
-		line.replace(line.find(employee), employee.length(), "");
-		temp << line << endl;
+	cin >> emp;
+	while (getline(file, line)) {
+		if (line != emp) {
+			temp << line << endl;
+		}
 	}
 	temp.close();
 	file.close();

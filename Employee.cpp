@@ -21,9 +21,9 @@ Employee::Employee(string na, string po, string da, string em, int ph, string hi
 
 // ID Number Generator
 int Employee::generateId() {
-	srand(time(NULL));
+	srand (time(NULL));
 	int id = rand() % 900000 + 100000; // number between 100000 and 999999
-	return id
+	return id;
 }
 
 /* // Checks ID Uniqueness
@@ -34,6 +34,7 @@ bool Employee::isUniqueId(int id) {
 
 // mutators
 void Employee::setId() { 
+	int id;
 	id = generateId();
 	cout << "ID Generated: " << id << endl;
 	/*while (!isUniqueId(id)) {
