@@ -73,6 +73,8 @@ int main()
 
 	// Function Show
 
+	// CREATE EMPLOYEE
+
 	// Lucas
 	// Function X (Employee Options)
 	
@@ -150,6 +152,45 @@ void employeeOptions() {
 			// call Welcome Function
 	}
 
+}
+/*
+Employee* createEmployee(int i) {
+
+	Employee Ei;
+	return Employee *Ei;
+
+}
+*/
+void inputPI(int i, Employee* emp) {
+
+	if (i == 1) {
+
+		cout << "Input Personal Information" << endl << endl;
+
+		cout << "Enter Employee Name with no spaces (JohnSmith): " << endl;
+		cin >> emp->setName();
+		cout << "Enter the Employee's Position with no spaces (GeneralManager): " << endl;
+		cin >> emp->setPos();
+
+	}
+	else if (i == 2) {
+
+		cout << "Input Personal Information" << endl << endl;
+
+		cout << "Enter Employee Name with no spaces (JohnSmith): " << endl;
+		cin >> emp->setName();
+		cout << "Enter the Employee's Position with no spaces (GeneralManager): " << endl;
+		cin >> emp->setPos();
+		cout << "Enter the Employee's Date of Birth (DD/MM/YYYY): " << endl;
+		cin >> emp->setDateOB();
+		cout << "Enter the Employee's Email Address (example@company.ca): " < endl;
+		cin >> emp->setEmail();
+		cout << "Enter the Employee's Phone Number (1234567890): " < endl;
+		cin >> emp->setPhone();
+		cout << "Enter the Date on which the Employee was hired (DD/MM/YYYY): " < endl;
+		cin >> emp->setDateH();
+
+	}
 }
 
 /* string newemployee;
