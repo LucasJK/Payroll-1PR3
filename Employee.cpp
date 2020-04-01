@@ -60,7 +60,9 @@ string Employee::getDateH() const { return doh; }
 
 // print
 void Employee::print() {
-	cout << endl;
+	cout << endl << endl << "****************************" << endl;
+	cout << "Employee Information Update: " << endl;
+	cout << "============================" << endl;	
 	cout << "ID Number: " << getId() << endl;
 	cout << "Name: " << getName() << endl;
 	cout << "Company Position: " << getPos() << endl;

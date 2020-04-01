@@ -31,7 +31,7 @@ public:
 		pos = "";
 		dob = "";
 		email = "";
-		phone = 0;
+		phone = 0000000000;
 		doh = "";
 	}
 

@@ -1,6 +1,7 @@
 //Matthew Fernandes, Lucas Kupiec 
 //400237897, 400068179
 #include <iostream>
+#include <fstream>
 #include <iomanip>
 #include <cmath>
 #include "Payroll.h"
@@ -42,12 +43,8 @@ int main()
 
 	//		2.2
 	//		Input Personal Info: [Function Input PI Full]
-	//		Input full name (caps, separated by space(s)) (First (Middle) Last)
-	//		Input company position/job title (caps, separated by space(s))
-	//		Input email
-	//		Input phone number (no spaces)
-	//		Input DOB (DD/MM/YYYY)
-	//		Input date hired (DD/MM/YYYY)
+
+
 	//		Input Pay Info:
 	//		1 - salary, 2 - wage [Function SW]
 	//			2.2.1
@@ -83,13 +80,8 @@ int main()
 	// Function SW Full (For full input of Pay info based on if salary or wage)
 	// Function Update PE (Pay/Efficiency)
 
-	// Function Add Employee
 
-	// Function Show Employee list
-
-	// Function Remove
-
-
+	
 	/*
 	Payroll* FinalPay[3] = {
 						  new Payroll(),
@@ -123,12 +115,47 @@ int main()
 }
 
 	 
-
-	
-	
-	
-
+// Function Add Employee
+void addEmployee() {
+	Employee e;
+	ofstream inFile;
+	inFile.open("Database.txt");
+	inFile << e.getName() << " " << e.getId() << " " << e.getPos() << " " << e.getDateOB() << " " << e.getEmail() << " " << e.getPhone() << " " << e.getDateH();
+	inFile.close();
 }
+// Function Show Employee list
+void printEmployee () {
+Employee e;
+cout << "ID Number: " << e.getId() << endl;
+cout << "Name: " << e.getName() << endl;
+cout << "Company Position: " << e.getPos() << endl;
+cout << "Email Address: " << e.getEmail() << endl;
+}
+// Function Remove
+void removeEmployee() {
+	string employee;
+	ifstream file;
+	ofstream temp;
+	file.open("Database.txt");
+	temp.open("Temp.txt");
+	cout << "Which Employee would you like to delete ?" << endl;
+	cin >> employee;
+
+	while (getline(file, temp)) {
+		line.replace(line.find(employee), employee.length(), "");
+		temp << line << endl;
+	}
+	temp.close();
+	file.close();
+	remove("Database.txt");
+	rename("Temp.txt", "Database.txt");
+}
+
+	
+	
+	
+
+
 /* string newemployee;
 
 	 cout << " Payroll Management System " << endl;

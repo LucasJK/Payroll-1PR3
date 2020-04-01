@@ -58,7 +58,7 @@ double Efficiency::getEfficiency() const {
 
 // Print Function
 void Efficiency::print() const {
-	cout << endl << endl << endl << "****************************" << endl;
+	cout << endl << endl << "****************************" << endl;
 	cout << "Worker Effciency Update: " << endl;
 	cout << "============================" << endl;
 	cout << "Projects Finished: " << projectsFinished << endl;
