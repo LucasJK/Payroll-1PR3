@@ -61,7 +61,9 @@ string Employee::getDateH() const { return doh; }
 // print
 void Employee::print() {
 	cout << endl;
+	// ID
 	cout << "Name: " << getName() << endl;
+	// position
 	cout << "Email Address: " << getEmail() << endl;
 	cout << "Phone Number: " << getPhone() << endl;
 	cout << "Date of Birth: " << getDateOB() << endl;

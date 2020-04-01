@@ -1,21 +1,101 @@
-/*//Matthew Fernandes 
-//400237897
+//Matthew Fernandes, Lucas Kupiec 
+//400237897, 400068179
 #include <iostream>
 #include <iomanip>
 #include <cmath>
 #include "Payroll.h"
 #include "Efficiency.h"
-//#include "Pay.h"
-#include  "Employee.h"
+#include "Pay.h"
+#include "Employee.h"
 using namespace std; 
 
 int main()
 {
+
+	// Read database text file and import payroll data [Function Read]
+
+	// Welcome user
+	// Give payroll overview (number of employees and total annual cost from salaried employees)
+	// Give command options:
+	// 1 - search for employee, 2 - add employee, 3 - view employees [Function W]
+
+	// 1 [Function]
+	//	1 - search by name, 2 - search by ID, 0 - return (to Function W) [Function Search]
+	//		1.1/1.2
+	//		Shows Info [Function Show]
+	//		1 - update pay/efficiency info, 2 - update personal info, 3 - remove employee [Function Remove], 0 - return (to Function W) [Function X]
+
+	// 2 [Function]
+	//	1 - enter basic info, 2 - enter all info, 0 - return (to Function W)
+	//		2.1
+	//		Input full name (caps, separated by space(s)) (First (Middle) Last) [Function Input PI]
+	//		Input company position/job title (caps, separated by space(s))
+	//		1 - salary, 2 - wage [Function SW]
+	//			2.1.1
+	//			Input annual salary [SW]
+	//			2.1.2
+	//			Input hourly wage [SW]
+
+	//			Employee X added [Function Add Employee]
+	//			Shows Info [Function Show]
+	//		1 - update pay/efficiency info [Function Update PE], 2 - update personal info [Function Update PI], 3 - remove employee [Function Remove], 0 - return (to Function W) [Function X]
+
+	//		2.2
+	//		Input Personal Info: [Function Input PI Full]
+	//		Input full name (caps, separated by space(s)) (First (Middle) Last)
+	//		Input company position/job title (caps, separated by space(s))
+	//		Input email
+	//		Input phone number (no spaces)
+	//		Input DOB (DD/MM/YYYY)
+	//		Input date hired (DD/MM/YYYY)
+	//		Input Pay Info:
+	//		1 - salary, 2 - wage [Function SW]
+	//			2.2.1
+	//			Input annual salary [SW]
+	//			2.2.2
+	//			Input hourly wage [SW]
+
+	//			[Function SW Full]
+
+	//			Employee X added[Function Add Employee]
+	//			Shows Info [Function Show]
+	//		1 - update pay/efficiency info, 2 - update personal info, 3 - remove employee [Function Remove], 0 - return (to Function W) [Function X]
+
+	// 3 [Function Show Employee list]
+
+
+
+	// Function Read
+
+	// Function W (Welcome)
+
+	// Function Search
+
+	// Function Show
+
+	// Function X (Employee Options)
+
+	// Function Input PI (Personal Info)
+	// Function Input PI Full (For full input of personal info)
+	// Function Update PI
+
+	// Function SW (Salary or Wage)
+	// Function SW Full (For full input of Pay info based on if salary or wage)
+	// Function Update PE (Pay/Efficiency)
+
+	// Function Add Employee
+
+	// Function Show Employee list
+
+	// Function Remove
+
+
+	/*
 	Payroll* FinalPay[3] = {
 						  new Payroll(),
 						  new Efficiency(),
 						  new Employee(),
-						 // new Pay()
+						  new Pay()
 	};
 
 	for (int i = 0; i < 3; i++) {
@@ -38,7 +118,7 @@ int main()
 	for (int i = 0; i < 3; i++) {
 		Payroll[i]->print();
 		cout << endl;
-	}
+	} */
 	return 0;
 }
 
